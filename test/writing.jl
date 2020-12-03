@@ -25,7 +25,7 @@
             Dict("host" => "nureha"),
             t,
         ),
-    ]
+    ] ≥
 
     write(server, "write_test", measurements)
     cpu_load, = query(server, "write_test", SELECT(;measurements=["performance"], condition=@querify(:host != "sadboi")))
